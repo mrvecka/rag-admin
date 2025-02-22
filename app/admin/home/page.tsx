@@ -13,12 +13,12 @@ import ApplicationUsageChart from "./ApplicationUsageChart";
 export default async function HomePage() {
   return (
     <>
-      <div className="grid md:grid-cols-3 gap-4">
-        <Card>
+      <div className="grid md:grid-cols-3 gap-4 mt-4">
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle># running applications</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="grow">
             You have 3 applications in total. 2 applications are running in PROD
           </CardContent>
           <CardFooter className="flex justify-end">
@@ -27,11 +27,13 @@ export default async function HomePage() {
             </Button>
           </CardFooter>
         </Card>
-        <Card>
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle># available models</CardTitle>
           </CardHeader>
-          <CardContent>You have 2 model available in your plan</CardContent>
+          <CardContent className="grow">
+            You have 2 model available in your plan
+          </CardContent>
           <CardFooter className="flex justify-end gap-2">
             <Button variant="outline" asChild>
               <Link href="#">See plans</Link>
@@ -41,11 +43,11 @@ export default async function HomePage() {
             </Button>
           </CardFooter>
         </Card>
-        <Card>
+        <Card className="flex flex-col">
           <CardHeader>
             <CardTitle># avg inference time</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="grow">
             Average inference time is less than 1s for production applications.
             For testing applications it might be slower.
           </CardContent>
