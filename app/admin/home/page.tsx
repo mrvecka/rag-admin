@@ -13,7 +13,7 @@ import ApplicationUsageChart from "./ApplicationUsageChart";
 export default async function HomePage() {
   return (
     <>
-      <div className="grid md:grid-cols-3 gap-4 mt-4">
+      <div className="grid md:grid-cols-3 gap-4">
         <Card className="flex flex-col">
           <CardHeader>
             <CardTitle># running applications</CardTitle>
