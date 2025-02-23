@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-import ApplicationUsageChart from "./ApplicationUsageChart";
+import ApplicationUsageChart from "./components/ApplicationUsageChart";
 
 export default async function HomePage() {
   return (

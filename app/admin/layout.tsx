@@ -9,6 +9,7 @@ import { LayoutGrid } from "lucide-react";
 import { House } from "lucide-react";
 import { AppWindow } from "lucide-react";
 import AdminBreadcrumbs from "./AdminBreadcrumbs";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,9 +22,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <AdminBreadcrumbs />
             <HeaderAuth />
           </header>
-          <main className="flex flex-1 items-start gap-2 p-4 sm:px-6 sm:py-0 md:gap-4 bg-muted/40">
+          <main className="flex flex-1 items-start gap-2 p-4 sm:px-6 sm:py-0 md:gap-4 md:mx-auto w-full md:max-w-[1200px]">
             <div className="w-full flex flex-col gap-4 mt-4 mb-4">
               {children}
+              <Toaster />
             </div>
           </main>
         </div>
