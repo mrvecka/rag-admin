@@ -1,11 +1,5 @@
+import { AvailableApplicationStatuses } from "@/lib/db/applications";
 import { z } from "zod";
-
-export const AvailableApplicationStatuses = [
-  "active",
-  "disabled",
-  "testing",
-] as const;
-export type ApplicationStatus = (typeof AvailableApplicationStatuses)[number];
 
 export const applicationFormSchema = z.object({
   name: z.string().min(3, {

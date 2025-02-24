@@ -1,13 +1,10 @@
 "use server";
 
-import { Application } from "@/lib/db/applications";
+import { Application, ApplicationStatus } from "@/lib/db/applications";
 import { ServerActionResponse } from "@/lib/utils";
 import { createClient } from "@/utils/supabase/server";
 import { revalidatePath } from "next/cache";
-import {
-  applicationFormSchema,
-  ApplicationStatus,
-} from "./ApplicationFormSchema";
+import { applicationFormSchema } from "./ApplicationFormSchema";
 
 export const fetchApplicationsAction = async () => {
   const supabase = await createClient();

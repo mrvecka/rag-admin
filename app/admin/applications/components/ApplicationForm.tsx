@@ -21,12 +21,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import {
-  applicationFormSchema,
-  AvailableApplicationStatuses,
-} from "../ApplicationFormSchema";
+import { applicationFormSchema } from "../ApplicationFormSchema";
 import { createApplicationAction, updateApplicationAction } from "../actions";
-import { Application } from "@/lib/db/applications";
+import {
+  Application,
+  AvailableApplicationStatuses,
+} from "@/lib/db/applications";
 import { isActionError } from "@/lib/utils";
 import { toast } from "sonner";
 import { SubmitButton } from "@/components/submit-button";
