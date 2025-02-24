@@ -13,6 +13,7 @@ import { usePathname } from "next/navigation";
 
 export default function DashboardBreadcrumb() {
   const pathName = usePathname();
+  // ToDo: refactor this to use a map of paths to breadcrumb names bare in mind home prefix and localization
   const currentPage = pathName.includes("/home") ? "Home" : "Applications";
 
   return (

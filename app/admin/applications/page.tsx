@@ -9,6 +9,7 @@ export default async function ApplicationsPage() {
   return (
     <div>
       <div className="flex justify-end items-center mb-2">
+        {/* ToDo: wouldn't this be better with separate route or intercepted route? Triggered from ApplicationTableRow it rely on already loaded data! */}
         <ApplicationFormSheet
           title="Create Application"
           trigger={<Button>Add new</Button>}

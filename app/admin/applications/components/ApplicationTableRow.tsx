@@ -41,12 +41,14 @@ export function ApplicationTableRow({
     }
   };
 
-  const handleStatusToggleAction = async () => {
+  const handleStatusToggleAction = async (approved: boolean) => {
     "use server";
-    await toggleApplicationStatusAction(
-      application.id,
-      isApplicationActive ? "disabled" : "active"
-    );
+    if (approved) {
+      await toggleApplicationStatusAction(
+        application.id,
+        isApplicationActive ? "disabled" : "active"
+      );
+    }
   };
 
   return (
