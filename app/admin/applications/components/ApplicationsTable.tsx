@@ -24,6 +24,7 @@ export default async function ApplicationsTable(props: {
               <TableHead className="hidden md:table-cell">
                 Use multi query
               </TableHead>
+              <TableHead className="hidden md:table-cell">API key</TableHead>
               <TableHead>
                 <span className="sr-only">Actions</span>
               </TableHead>

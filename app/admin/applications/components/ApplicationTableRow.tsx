@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/tooltip";
 import { isActionError } from "@/lib/utils";
 import { ApplicationFormSheet } from "./ApplicationFormSheet";
+import { CopyToClipboard } from "@/components/CopyToClipboard";
 
 export function ApplicationTableRow({
   application,
@@ -69,7 +70,9 @@ export function ApplicationTableRow({
           <X color="red" size={20} />
         )}
       </TableCell>
-
+      <TableCell className="hidden md:table-cell">
+        <CopyToClipboard text={application.api_key} />
+      </TableCell>
       <TableCell className="flex gap-2">
         <Tooltip>
           <TooltipTrigger asChild>

@@ -66,6 +66,7 @@ export default function ApplicationForm(props: ApplicationFormProps) {
   }
 
   async function onSubmit(values: z.infer<typeof applicationFormSchema>) {
+    // ToDo: Find a way to get rid of "as Application" cast
     if (props.application) {
       const result = await updateApplicationAction(
         props.application.id,
